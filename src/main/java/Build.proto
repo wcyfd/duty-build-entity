@@ -1,0 +1,105 @@
+syntax = "proto3";
+package com.aim.duty.duty_build_entity.protobuf.protocal;
+message CS_CreateRole{
+	string account=1;
+	string name=2;
+}
+
+message SC_CreateRole{
+	int32 success=1;
+}
+
+message CS_ShowWall{
+	
+}
+
+message SC_ShowWall{
+	int32 blood=1;
+	int32 capacity=2;
+	map<int32,Brick> bricks=3;
+
+	message Brick{
+		int32 id = 1;
+		int32 mineId=2;
+		map<int32,Magic> magics=3;
+	}
+
+	message Magic{
+		int32 magicId=1;
+		int32 duration=2;
+		int32 value=3;
+	}	
+}
+
+message CS_ShowBag{
+	
+}
+
+message SC_ShowBag{
+	map<int32,Brick> bricks=1;
+	message Brick{
+		int32 id = 1;
+		int32 mineId=2;
+		map<int32,Magic> magics=3;
+	}
+
+	message Magic{
+		int32 magicId=1;
+		int32 duration=2;
+		int32 value=3;
+	}
+}
+
+message CS_ShowBrick{
+	int32 propId = 1;
+}
+
+message SC_ShowBrick{
+	int32 mineId=1;
+	map<int32,Magic> magics=2;
+
+	message Magic{
+		int32 magicId=1;
+		int32 duration=2;
+		int32 value=3;
+	}
+}
+
+message CS_AddBrickToWall{
+	int32 indexAtWall =1;
+	int32 propId=2;
+}
+
+message SC_AddBrickToWall{
+	int32 success=1;	
+}
+
+message CS_AddMagic{
+	int32 propId=1;
+	int32 magicId=2;
+}
+
+message SC_AddMagic{
+	int32 success=1;
+}
+
+message CS_ChooseMaterial{
+	int32 brickSourceId = 1;
+	int32 brickSourceNum=2;
+}
+
+message SC_ChooseMaterial{
+	int32 success=1;
+}
+
+message CS_GetResult{
+	int32 brickCount =1;
+}
+
+message SC_GetResult{
+	map<int32,Brick> bricks=1;
+	message Brick{
+		int32 id=1;		
+		int32 mineId=2;
+	}
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package com.aim.duty.duty_build_entity.protobuf.serial;
+
+message SerMagic{
+	int32 magicId=1;
+	int32 duration=2;
+	int32 value=3;
+}
+
+message SerBrick{
+	int32 mineId=1;
+	map<int32,SerMagic> magics=2;
+}
