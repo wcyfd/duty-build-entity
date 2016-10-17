@@ -93,13 +93,29 @@ message SC_ChooseMaterial{
 }
 
 message CS_GetResult{
-	int32 brickCount =1;
+	repeated Brick bricks=1;
+	message Brick{
+		map<int32,Magic> magics = 1;
+		message Magic{
+			int32 magicId=1;
+			int32 duration=2;
+			int32 value=3;
+		}
+	}
 }
 
 message SC_GetResult{
-	map<int32,Brick> bricks=1;
+	int32 success = 1;
+	repeated Brick bricks = 2;
 	message Brick{
-		int32 id=1;		
-		int32 mineId=2;
+		int32 id = 1;
+		int32 mineId = 2;
+		map<int32,Magic> magics =3;
+		
+		message Magic{
+			int32 magicId=1;
+			int32 duration=2;
+			int32 value=3;
+		}
 	}
 }

@@ -10488,9 +10488,28 @@ public final class Build {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 brickCount = 1;</code>
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
      */
-    int getBrickCount();
+    java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick> 
+        getBricksList();
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+     */
+    com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick getBricks(int index);
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+     */
+    int getBricksCount();
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+     */
+    java.util.List<? extends com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.BrickOrBuilder> 
+        getBricksOrBuilderList();
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+     */
+    com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.BrickOrBuilder getBricksOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult}
@@ -10504,7 +10523,7 @@ public final class Build {
       super(builder);
     }
     private CS_GetResult() {
-      brickCount_ = 0;
+      bricks_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -10532,9 +10551,13 @@ public final class Build {
               }
               break;
             }
-            case 8: {
-
-              brickCount_ = input.readInt32();
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                bricks_ = new java.util.ArrayList<com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              bricks_.add(
+                  input.readMessage(com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.parser(), extensionRegistry));
               break;
             }
           }
@@ -10545,6 +10568,9 @@ public final class Build {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          bricks_ = java.util.Collections.unmodifiableList(bricks_);
+        }
         makeExtensionsImmutable();
       }
     }
@@ -10560,13 +10586,1266 @@ public final class Build {
               com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.class, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Builder.class);
     }
 
-    public static final int BRICKCOUNT_FIELD_NUMBER = 1;
-    private int brickCount_;
+    public interface BrickOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+       */
+      int getMagicsCount();
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+       */
+      boolean containsMagics(
+          int key);
+      /**
+       * Use {@link #getMagicsMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic>
+      getMagics();
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+       */
+      java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic>
+      getMagicsMap();
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+       */
+
+      com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic getMagicsOrDefault(
+          int key,
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic defaultValue);
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+       */
+
+      com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic getMagicsOrThrow(
+          int key);
+    }
     /**
-     * <code>optional int32 brickCount = 1;</code>
+     * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick}
      */
-    public int getBrickCount() {
-      return brickCount_;
+    public  static final class Brick extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick)
+        BrickOrBuilder {
+      // Use Brick.newBuilder() to construct.
+      private Brick(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Brick() {
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      }
+      private Brick(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        int mutable_bitField0_ = 0;
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!input.skipField(tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                  magics_ = com.google.protobuf.MapField.newMapField(
+                      MagicsDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic>
+                magics = input.readMessage(
+                    MagicsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                magics_.getMutableMap().put(magics.getKey(), magics.getValue());
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMagics();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.class, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder.class);
+      }
+
+      public interface MagicOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional int32 magicId = 1;</code>
+         */
+        int getMagicId();
+
+        /**
+         * <code>optional int32 duration = 2;</code>
+         */
+        int getDuration();
+
+        /**
+         * <code>optional int32 value = 3;</code>
+         */
+        int getValue();
+      }
+      /**
+       * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic}
+       */
+      public  static final class Magic extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic)
+          MagicOrBuilder {
+        // Use Magic.newBuilder() to construct.
+        private Magic(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private Magic() {
+          magicId_ = 0;
+          duration_ = 0;
+          value_ = 0;
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+        }
+        private Magic(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          int mutable_bitField0_ = 0;
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!input.skipField(tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 8: {
+
+                  magicId_ = input.readInt32();
+                  break;
+                }
+                case 16: {
+
+                  duration_ = input.readInt32();
+                  break;
+                }
+                case 24: {
+
+                  value_ = input.readInt32();
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_Magic_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_Magic_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic.class, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic.Builder.class);
+        }
+
+        public static final int MAGICID_FIELD_NUMBER = 1;
+        private int magicId_;
+        /**
+         * <code>optional int32 magicId = 1;</code>
+         */
+        public int getMagicId() {
+          return magicId_;
+        }
+
+        public static final int DURATION_FIELD_NUMBER = 2;
+        private int duration_;
+        /**
+         * <code>optional int32 duration = 2;</code>
+         */
+        public int getDuration() {
+          return duration_;
+        }
+
+        public static final int VALUE_FIELD_NUMBER = 3;
+        private int value_;
+        /**
+         * <code>optional int32 value = 3;</code>
+         */
+        public int getValue() {
+          return value_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (magicId_ != 0) {
+            output.writeInt32(1, magicId_);
+          }
+          if (duration_ != 0) {
+            output.writeInt32(2, duration_);
+          }
+          if (value_ != 0) {
+            output.writeInt32(3, value_);
+          }
+        }
+
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (magicId_ != 0) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(1, magicId_);
+          }
+          if (duration_ != 0) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(2, duration_);
+          }
+          if (value_ != 0) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(3, value_);
+          }
+          memoizedSize = size;
+          return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic)) {
+            return super.equals(obj);
+          }
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic other = (com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic) obj;
+
+          boolean result = true;
+          result = result && (getMagicId()
+              == other.getMagicId());
+          result = result && (getDuration()
+              == other.getDuration());
+          result = result && (getValue()
+              == other.getValue());
+          return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptorForType().hashCode();
+          hash = (37 * hash) + MAGICID_FIELD_NUMBER;
+          hash = (53 * hash) + getMagicId();
+          hash = (37 * hash) + DURATION_FIELD_NUMBER;
+          hash = (53 * hash) + getDuration();
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValue();
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic)
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.MagicOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_Magic_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_Magic_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic.class, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic.Builder.class);
+          }
+
+          // Construct using com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          public Builder clear() {
+            super.clear();
+            magicId_ = 0;
+
+            duration_ = 0;
+
+            value_ = 0;
+
+            return this;
+          }
+
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_Magic_descriptor;
+          }
+
+          public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic getDefaultInstanceForType() {
+            return com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic.getDefaultInstance();
+          }
+
+          public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic build() {
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic buildPartial() {
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic result = new com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic(this);
+            result.magicId_ = magicId_;
+            result.duration_ = duration_;
+            result.value_ = value_;
+            onBuilt();
+            return result;
+          }
+
+          public Builder clone() {
+            return (Builder) super.clone();
+          }
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              Object value) {
+            return (Builder) super.setField(field, value);
+          }
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return (Builder) super.clearField(field);
+          }
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return (Builder) super.clearOneof(oneof);
+          }
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, Object value) {
+            return (Builder) super.setRepeatedField(field, index, value);
+          }
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              Object value) {
+            return (Builder) super.addRepeatedField(field, value);
+          }
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic) {
+              return mergeFrom((com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic other) {
+            if (other == com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic.getDefaultInstance()) return this;
+            if (other.getMagicId() != 0) {
+              setMagicId(other.getMagicId());
+            }
+            if (other.getDuration() != 0) {
+              setDuration(other.getDuration());
+            }
+            if (other.getValue() != 0) {
+              setValue(other.getValue());
+            }
+            onChanged();
+            return this;
+          }
+
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+
+          private int magicId_ ;
+          /**
+           * <code>optional int32 magicId = 1;</code>
+           */
+          public int getMagicId() {
+            return magicId_;
+          }
+          /**
+           * <code>optional int32 magicId = 1;</code>
+           */
+          public Builder setMagicId(int value) {
+            
+            magicId_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional int32 magicId = 1;</code>
+           */
+          public Builder clearMagicId() {
+            
+            magicId_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int duration_ ;
+          /**
+           * <code>optional int32 duration = 2;</code>
+           */
+          public int getDuration() {
+            return duration_;
+          }
+          /**
+           * <code>optional int32 duration = 2;</code>
+           */
+          public Builder setDuration(int value) {
+            
+            duration_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional int32 duration = 2;</code>
+           */
+          public Builder clearDuration() {
+            
+            duration_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int value_ ;
+          /**
+           * <code>optional int32 value = 3;</code>
+           */
+          public int getValue() {
+            return value_;
+          }
+          /**
+           * <code>optional int32 value = 3;</code>
+           */
+          public Builder setValue(int value) {
+            
+            value_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional int32 value = 3;</code>
+           */
+          public Builder clearValue() {
+            
+            value_ = 0;
+            onChanged();
+            return this;
+          }
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return this;
+          }
+
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return this;
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic)
+        }
+
+        // @@protoc_insertion_point(class_scope:com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic)
+        private static final com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic();
+        }
+
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Magic>
+            PARSER = new com.google.protobuf.AbstractParser<Magic>() {
+          public Magic parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+              return new Magic(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<Magic> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Magic> getParserForType() {
+          return PARSER;
+        }
+
+        public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public static final int MAGICS_FIELD_NUMBER = 1;
+      private static final class MagicsDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic>newDefaultInstance(
+                    com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_MagicsEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.INT32,
+                    0,
+                    com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                    com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic.getDefaultInstance());
+      }
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> magics_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic>
+      internalGetMagics() {
+        if (magics_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MagicsDefaultEntryHolder.defaultEntry);
+        }
+        return magics_;
+      }
+
+      public int getMagicsCount() {
+        return internalGetMagics().getMap().size();
+      }
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+       */
+
+      public boolean containsMagics(
+          int key) {
+        
+        return internalGetMagics().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMagicsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> getMagics() {
+        return getMagicsMap();
+      }
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+       */
+
+      public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> getMagicsMap() {
+        return internalGetMagics().getMap();
+      }
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+       */
+
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic getMagicsOrDefault(
+          int key,
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic defaultValue) {
+        
+        java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> map =
+            internalGetMagics().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+       */
+
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic getMagicsOrThrow(
+          int key) {
+        
+        java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> map =
+            internalGetMagics().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (java.util.Map.Entry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> entry
+             : internalGetMagics().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic>
+          magics = MagicsDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          output.writeMessage(1, magics);
+        }
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (java.util.Map.Entry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> entry
+             : internalGetMagics().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic>
+          magics = MagicsDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(1, magics);
+        }
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick)) {
+          return super.equals(obj);
+        }
+        com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick other = (com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick) obj;
+
+        boolean result = true;
+        result = result && internalGetMagics().equals(
+            other.internalGetMagics());
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptorForType().hashCode();
+        if (!internalGetMagics().getMap().isEmpty()) {
+          hash = (37 * hash) + MAGICS_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetMagics().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick)
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.BrickOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_descriptor;
+        }
+
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 1:
+              return internalGetMagics();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 1:
+              return internalGetMutableMagics();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.class, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder.class);
+        }
+
+        // Construct using com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          internalGetMutableMagics().clear();
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_descriptor;
+        }
+
+        public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick getDefaultInstanceForType() {
+          return com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.getDefaultInstance();
+        }
+
+        public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick build() {
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick buildPartial() {
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick result = new com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick(this);
+          int from_bitField0_ = bitField0_;
+          result.magics_ = internalGetMagics();
+          result.magics_.makeImmutable();
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick) {
+            return mergeFrom((com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick other) {
+          if (other == com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.getDefaultInstance()) return this;
+          internalGetMutableMagics().mergeFrom(
+              other.internalGetMagics());
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.MapField<
+            java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> magics_;
+        private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic>
+        internalGetMagics() {
+          if (magics_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MagicsDefaultEntryHolder.defaultEntry);
+          }
+          return magics_;
+        }
+        private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic>
+        internalGetMutableMagics() {
+          onChanged();;
+          if (magics_ == null) {
+            magics_ = com.google.protobuf.MapField.newMapField(
+                MagicsDefaultEntryHolder.defaultEntry);
+          }
+          if (!magics_.isMutable()) {
+            magics_ = magics_.copy();
+          }
+          return magics_;
+        }
+
+        public int getMagicsCount() {
+          return internalGetMagics().getMap().size();
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+         */
+
+        public boolean containsMagics(
+            int key) {
+          
+          return internalGetMagics().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMagicsMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> getMagics() {
+          return getMagicsMap();
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+         */
+
+        public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> getMagicsMap() {
+          return internalGetMagics().getMap();
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+         */
+
+        public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic getMagicsOrDefault(
+            int key,
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic defaultValue) {
+          
+          java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> map =
+              internalGetMagics().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+         */
+
+        public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic getMagicsOrThrow(
+            int key) {
+          
+          java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> map =
+              internalGetMagics().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearMagics() {
+          getMutableMagics().clear();
+          return this;
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+         */
+
+        public Builder removeMagics(
+            int key) {
+          
+          getMutableMagics().remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic>
+        getMutableMagics() {
+          return internalGetMutableMagics().getMutableMap();
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+         */
+        public Builder putMagics(
+            int key,
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic value) {
+          
+          if (value == null) { throw new java.lang.NullPointerException(); }
+          getMutableMagics().put(key, value);
+          return this;
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick.Magic&gt; magics = 1;</code>
+         */
+
+        public Builder putAllMagics(
+            java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Magic> values) {
+          getMutableMagics().putAll(values);
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick)
+      }
+
+      // @@protoc_insertion_point(class_scope:com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick)
+      private static final com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick();
+      }
+
+      public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Brick>
+          PARSER = new com.google.protobuf.AbstractParser<Brick>() {
+        public Brick parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Brick(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Brick> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Brick> getParserForType() {
+        return PARSER;
+      }
+
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int BRICKS_FIELD_NUMBER = 1;
+    private java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick> bricks_;
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+     */
+    public java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick> getBricksList() {
+      return bricks_;
+    }
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+     */
+    public java.util.List<? extends com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.BrickOrBuilder> 
+        getBricksOrBuilderList() {
+      return bricks_;
+    }
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+     */
+    public int getBricksCount() {
+      return bricks_.size();
+    }
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+     */
+    public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick getBricks(int index) {
+      return bricks_.get(index);
+    }
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+     */
+    public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.BrickOrBuilder getBricksOrBuilder(
+        int index) {
+      return bricks_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -10581,8 +11860,8 @@ public final class Build {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (brickCount_ != 0) {
-        output.writeInt32(1, brickCount_);
+      for (int i = 0; i < bricks_.size(); i++) {
+        output.writeMessage(1, bricks_.get(i));
       }
     }
 
@@ -10591,9 +11870,9 @@ public final class Build {
       if (size != -1) return size;
 
       size = 0;
-      if (brickCount_ != 0) {
+      for (int i = 0; i < bricks_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, brickCount_);
+          .computeMessageSize(1, bricks_.get(i));
       }
       memoizedSize = size;
       return size;
@@ -10611,8 +11890,8 @@ public final class Build {
       com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult other = (com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult) obj;
 
       boolean result = true;
-      result = result && (getBrickCount()
-          == other.getBrickCount());
+      result = result && getBricksList()
+          .equals(other.getBricksList());
       return result;
     }
 
@@ -10623,8 +11902,10 @@ public final class Build {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptorForType().hashCode();
-      hash = (37 * hash) + BRICKCOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getBrickCount();
+      if (getBricksCount() > 0) {
+        hash = (37 * hash) + BRICKS_FIELD_NUMBER;
+        hash = (53 * hash) + getBricksList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10739,12 +12020,17 @@ public final class Build {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getBricksFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
-        brickCount_ = 0;
-
+        if (bricksBuilder_ == null) {
+          bricks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          bricksBuilder_.clear();
+        }
         return this;
       }
 
@@ -10767,7 +12053,16 @@ public final class Build {
 
       public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult buildPartial() {
         com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult result = new com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult(this);
-        result.brickCount_ = brickCount_;
+        int from_bitField0_ = bitField0_;
+        if (bricksBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            bricks_ = java.util.Collections.unmodifiableList(bricks_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.bricks_ = bricks_;
+        } else {
+          result.bricks_ = bricksBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -10809,8 +12104,31 @@ public final class Build {
 
       public Builder mergeFrom(com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult other) {
         if (other == com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.getDefaultInstance()) return this;
-        if (other.getBrickCount() != 0) {
-          setBrickCount(other.getBrickCount());
+        if (bricksBuilder_ == null) {
+          if (!other.bricks_.isEmpty()) {
+            if (bricks_.isEmpty()) {
+              bricks_ = other.bricks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBricksIsMutable();
+              bricks_.addAll(other.bricks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bricks_.isEmpty()) {
+            if (bricksBuilder_.isEmpty()) {
+              bricksBuilder_.dispose();
+              bricksBuilder_ = null;
+              bricks_ = other.bricks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              bricksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBricksFieldBuilder() : null;
+            } else {
+              bricksBuilder_.addAllMessages(other.bricks_);
+            }
+          }
         }
         onChanged();
         return this;
@@ -10837,31 +12155,246 @@ public final class Build {
         }
         return this;
       }
+      private int bitField0_;
 
-      private int brickCount_ ;
+      private java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick> bricks_ =
+        java.util.Collections.emptyList();
+      private void ensureBricksIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          bricks_ = new java.util.ArrayList<com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick>(bricks_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.BrickOrBuilder> bricksBuilder_;
+
       /**
-       * <code>optional int32 brickCount = 1;</code>
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
        */
-      public int getBrickCount() {
-        return brickCount_;
+      public java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick> getBricksList() {
+        if (bricksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bricks_);
+        } else {
+          return bricksBuilder_.getMessageList();
+        }
       }
       /**
-       * <code>optional int32 brickCount = 1;</code>
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
        */
-      public Builder setBrickCount(int value) {
-        
-        brickCount_ = value;
-        onChanged();
+      public int getBricksCount() {
+        if (bricksBuilder_ == null) {
+          return bricks_.size();
+        } else {
+          return bricksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick getBricks(int index) {
+        if (bricksBuilder_ == null) {
+          return bricks_.get(index);
+        } else {
+          return bricksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public Builder setBricks(
+          int index, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick value) {
+        if (bricksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBricksIsMutable();
+          bricks_.set(index, value);
+          onChanged();
+        } else {
+          bricksBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>optional int32 brickCount = 1;</code>
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
        */
-      public Builder clearBrickCount() {
-        
-        brickCount_ = 0;
-        onChanged();
+      public Builder setBricks(
+          int index, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder builderForValue) {
+        if (bricksBuilder_ == null) {
+          ensureBricksIsMutable();
+          bricks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bricksBuilder_.setMessage(index, builderForValue.build());
+        }
         return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public Builder addBricks(com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick value) {
+        if (bricksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBricksIsMutable();
+          bricks_.add(value);
+          onChanged();
+        } else {
+          bricksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public Builder addBricks(
+          int index, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick value) {
+        if (bricksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBricksIsMutable();
+          bricks_.add(index, value);
+          onChanged();
+        } else {
+          bricksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public Builder addBricks(
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder builderForValue) {
+        if (bricksBuilder_ == null) {
+          ensureBricksIsMutable();
+          bricks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bricksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public Builder addBricks(
+          int index, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder builderForValue) {
+        if (bricksBuilder_ == null) {
+          ensureBricksIsMutable();
+          bricks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bricksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public Builder addAllBricks(
+          java.lang.Iterable<? extends com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick> values) {
+        if (bricksBuilder_ == null) {
+          ensureBricksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bricks_);
+          onChanged();
+        } else {
+          bricksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public Builder clearBricks() {
+        if (bricksBuilder_ == null) {
+          bricks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          bricksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public Builder removeBricks(int index) {
+        if (bricksBuilder_ == null) {
+          ensureBricksIsMutable();
+          bricks_.remove(index);
+          onChanged();
+        } else {
+          bricksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder getBricksBuilder(
+          int index) {
+        return getBricksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.BrickOrBuilder getBricksOrBuilder(
+          int index) {
+        if (bricksBuilder_ == null) {
+          return bricks_.get(index);  } else {
+          return bricksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public java.util.List<? extends com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.BrickOrBuilder> 
+           getBricksOrBuilderList() {
+        if (bricksBuilder_ != null) {
+          return bricksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bricks_);
+        }
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder addBricksBuilder() {
+        return getBricksFieldBuilder().addBuilder(
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder addBricksBuilder(
+          int index) {
+        return getBricksFieldBuilder().addBuilder(
+            index, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.CS_GetResult.Brick bricks = 1;</code>
+       */
+      public java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder> 
+           getBricksBuilderList() {
+        return getBricksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.BrickOrBuilder> 
+          getBricksFieldBuilder() {
+        if (bricksBuilder_ == null) {
+          bricksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.Brick.Builder, com.aim.duty.duty_build_entity.protobuf.protocal.Build.CS_GetResult.BrickOrBuilder>(
+                  bricks_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          bricks_ = null;
+        }
+        return bricksBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10917,38 +12450,33 @@ public final class Build {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
+     * <code>optional int32 success = 1;</code>
+     */
+    int getSuccess();
+
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+     */
+    java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> 
+        getBricksList();
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+     */
+    com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick getBricks(int index);
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
      */
     int getBricksCount();
     /**
-     * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
      */
-    boolean containsBricks(
-        int key);
+    java.util.List<? extends com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.BrickOrBuilder> 
+        getBricksOrBuilderList();
     /**
-     * Use {@link #getBricksMap()} instead.
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
      */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>
-    getBricks();
-    /**
-     * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
-     */
-    java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>
-    getBricksMap();
-    /**
-     * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
-     */
-
-    com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick getBricksOrDefault(
-        int key,
-        com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick defaultValue);
-    /**
-     * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
-     */
-
-    com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick getBricksOrThrow(
-        int key);
+    com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.BrickOrBuilder getBricksOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult}
@@ -10962,6 +12490,8 @@ public final class Build {
       super(builder);
     }
     private SC_GetResult() {
+      success_ = 0;
+      bricks_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -10989,16 +12519,18 @@ public final class Build {
               }
               break;
             }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                bricks_ = com.google.protobuf.MapField.newMapField(
-                    BricksDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+            case 8: {
+
+              success_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                bricks_ = new java.util.ArrayList<com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>();
+                mutable_bitField0_ |= 0x00000002;
               }
-              com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>
-              bricks = input.readMessage(
-                  BricksDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              bricks_.getMutableMap().put(bricks.getKey(), bricks.getValue());
+              bricks_.add(
+                  input.readMessage(com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.parser(), extensionRegistry));
               break;
             }
           }
@@ -11009,6 +12541,9 @@ public final class Build {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          bricks_ = java.util.Collections.unmodifiableList(bricks_);
+        }
         makeExtensionsImmutable();
       }
     }
@@ -11017,17 +12552,6 @@ public final class Build {
       return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetBricks();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_fieldAccessorTable
@@ -11048,6 +12572,40 @@ public final class Build {
        * <code>optional int32 mineId = 2;</code>
        */
       int getMineId();
+
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+       */
+      int getMagicsCount();
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+       */
+      boolean containsMagics(
+          int key);
+      /**
+       * Use {@link #getMagicsMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic>
+      getMagics();
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+       */
+      java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic>
+      getMagicsMap();
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+       */
+
+      com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic getMagicsOrDefault(
+          int key,
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic defaultValue);
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+       */
+
+      com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic getMagicsOrThrow(
+          int key);
     }
     /**
      * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick}
@@ -11100,6 +12658,18 @@ public final class Build {
                 mineId_ = input.readInt32();
                 break;
               }
+              case 26: {
+                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                  magics_ = com.google.protobuf.MapField.newMapField(
+                      MagicsDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic>
+                magics = input.readMessage(
+                    MagicsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                magics_.getMutableMap().put(magics.getKey(), magics.getValue());
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -11116,6 +12686,17 @@ public final class Build {
         return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMagics();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_fieldAccessorTable
@@ -11123,6 +12704,562 @@ public final class Build {
                 com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.class, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder.class);
       }
 
+      public interface MagicOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional int32 magicId = 1;</code>
+         */
+        int getMagicId();
+
+        /**
+         * <code>optional int32 duration = 2;</code>
+         */
+        int getDuration();
+
+        /**
+         * <code>optional int32 value = 3;</code>
+         */
+        int getValue();
+      }
+      /**
+       * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic}
+       */
+      public  static final class Magic extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic)
+          MagicOrBuilder {
+        // Use Magic.newBuilder() to construct.
+        private Magic(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private Magic() {
+          magicId_ = 0;
+          duration_ = 0;
+          value_ = 0;
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+        }
+        private Magic(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          int mutable_bitField0_ = 0;
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!input.skipField(tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 8: {
+
+                  magicId_ = input.readInt32();
+                  break;
+                }
+                case 16: {
+
+                  duration_ = input.readInt32();
+                  break;
+                }
+                case 24: {
+
+                  value_ = input.readInt32();
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_Magic_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_Magic_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic.class, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic.Builder.class);
+        }
+
+        public static final int MAGICID_FIELD_NUMBER = 1;
+        private int magicId_;
+        /**
+         * <code>optional int32 magicId = 1;</code>
+         */
+        public int getMagicId() {
+          return magicId_;
+        }
+
+        public static final int DURATION_FIELD_NUMBER = 2;
+        private int duration_;
+        /**
+         * <code>optional int32 duration = 2;</code>
+         */
+        public int getDuration() {
+          return duration_;
+        }
+
+        public static final int VALUE_FIELD_NUMBER = 3;
+        private int value_;
+        /**
+         * <code>optional int32 value = 3;</code>
+         */
+        public int getValue() {
+          return value_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (magicId_ != 0) {
+            output.writeInt32(1, magicId_);
+          }
+          if (duration_ != 0) {
+            output.writeInt32(2, duration_);
+          }
+          if (value_ != 0) {
+            output.writeInt32(3, value_);
+          }
+        }
+
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (magicId_ != 0) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(1, magicId_);
+          }
+          if (duration_ != 0) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(2, duration_);
+          }
+          if (value_ != 0) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(3, value_);
+          }
+          memoizedSize = size;
+          return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic)) {
+            return super.equals(obj);
+          }
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic other = (com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic) obj;
+
+          boolean result = true;
+          result = result && (getMagicId()
+              == other.getMagicId());
+          result = result && (getDuration()
+              == other.getDuration());
+          result = result && (getValue()
+              == other.getValue());
+          return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptorForType().hashCode();
+          hash = (37 * hash) + MAGICID_FIELD_NUMBER;
+          hash = (53 * hash) + getMagicId();
+          hash = (37 * hash) + DURATION_FIELD_NUMBER;
+          hash = (53 * hash) + getDuration();
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValue();
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic)
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.MagicOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_Magic_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_Magic_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic.class, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic.Builder.class);
+          }
+
+          // Construct using com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          public Builder clear() {
+            super.clear();
+            magicId_ = 0;
+
+            duration_ = 0;
+
+            value_ = 0;
+
+            return this;
+          }
+
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_Magic_descriptor;
+          }
+
+          public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic getDefaultInstanceForType() {
+            return com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic.getDefaultInstance();
+          }
+
+          public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic build() {
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic buildPartial() {
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic result = new com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic(this);
+            result.magicId_ = magicId_;
+            result.duration_ = duration_;
+            result.value_ = value_;
+            onBuilt();
+            return result;
+          }
+
+          public Builder clone() {
+            return (Builder) super.clone();
+          }
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              Object value) {
+            return (Builder) super.setField(field, value);
+          }
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return (Builder) super.clearField(field);
+          }
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return (Builder) super.clearOneof(oneof);
+          }
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, Object value) {
+            return (Builder) super.setRepeatedField(field, index, value);
+          }
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              Object value) {
+            return (Builder) super.addRepeatedField(field, value);
+          }
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic) {
+              return mergeFrom((com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic other) {
+            if (other == com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic.getDefaultInstance()) return this;
+            if (other.getMagicId() != 0) {
+              setMagicId(other.getMagicId());
+            }
+            if (other.getDuration() != 0) {
+              setDuration(other.getDuration());
+            }
+            if (other.getValue() != 0) {
+              setValue(other.getValue());
+            }
+            onChanged();
+            return this;
+          }
+
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+
+          private int magicId_ ;
+          /**
+           * <code>optional int32 magicId = 1;</code>
+           */
+          public int getMagicId() {
+            return magicId_;
+          }
+          /**
+           * <code>optional int32 magicId = 1;</code>
+           */
+          public Builder setMagicId(int value) {
+            
+            magicId_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional int32 magicId = 1;</code>
+           */
+          public Builder clearMagicId() {
+            
+            magicId_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int duration_ ;
+          /**
+           * <code>optional int32 duration = 2;</code>
+           */
+          public int getDuration() {
+            return duration_;
+          }
+          /**
+           * <code>optional int32 duration = 2;</code>
+           */
+          public Builder setDuration(int value) {
+            
+            duration_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional int32 duration = 2;</code>
+           */
+          public Builder clearDuration() {
+            
+            duration_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int value_ ;
+          /**
+           * <code>optional int32 value = 3;</code>
+           */
+          public int getValue() {
+            return value_;
+          }
+          /**
+           * <code>optional int32 value = 3;</code>
+           */
+          public Builder setValue(int value) {
+            
+            value_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional int32 value = 3;</code>
+           */
+          public Builder clearValue() {
+            
+            value_ = 0;
+            onChanged();
+            return this;
+          }
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return this;
+          }
+
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return this;
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic)
+        }
+
+        // @@protoc_insertion_point(class_scope:com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic)
+        private static final com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic();
+        }
+
+        public static com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Magic>
+            PARSER = new com.google.protobuf.AbstractParser<Magic>() {
+          public Magic parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+              return new Magic(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<Magic> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Magic> getParserForType() {
+          return PARSER;
+        }
+
+        public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      private int bitField0_;
       public static final int ID_FIELD_NUMBER = 1;
       private int id_;
       /**
@@ -11139,6 +13276,82 @@ public final class Build {
        */
       public int getMineId() {
         return mineId_;
+      }
+
+      public static final int MAGICS_FIELD_NUMBER = 3;
+      private static final class MagicsDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic>newDefaultInstance(
+                    com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_MagicsEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.INT32,
+                    0,
+                    com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                    com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic.getDefaultInstance());
+      }
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> magics_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic>
+      internalGetMagics() {
+        if (magics_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MagicsDefaultEntryHolder.defaultEntry);
+        }
+        return magics_;
+      }
+
+      public int getMagicsCount() {
+        return internalGetMagics().getMap().size();
+      }
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+       */
+
+      public boolean containsMagics(
+          int key) {
+        
+        return internalGetMagics().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMagicsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> getMagics() {
+        return getMagicsMap();
+      }
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+       */
+
+      public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> getMagicsMap() {
+        return internalGetMagics().getMap();
+      }
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+       */
+
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic getMagicsOrDefault(
+          int key,
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic defaultValue) {
+        
+        java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> map =
+            internalGetMagics().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+       */
+
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic getMagicsOrThrow(
+          int key) {
+        
+        java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> map =
+            internalGetMagics().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
       }
 
       private byte memoizedIsInitialized = -1;
@@ -11159,6 +13372,15 @@ public final class Build {
         if (mineId_ != 0) {
           output.writeInt32(2, mineId_);
         }
+        for (java.util.Map.Entry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> entry
+             : internalGetMagics().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic>
+          magics = MagicsDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          output.writeMessage(3, magics);
+        }
       }
 
       public int getSerializedSize() {
@@ -11173,6 +13395,16 @@ public final class Build {
         if (mineId_ != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(2, mineId_);
+        }
+        for (java.util.Map.Entry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> entry
+             : internalGetMagics().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic>
+          magics = MagicsDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(3, magics);
         }
         memoizedSize = size;
         return size;
@@ -11194,6 +13426,8 @@ public final class Build {
             == other.getId());
         result = result && (getMineId()
             == other.getMineId());
+        result = result && internalGetMagics().equals(
+            other.internalGetMagics());
         return result;
       }
 
@@ -11208,6 +13442,10 @@ public final class Build {
         hash = (53 * hash) + getId();
         hash = (37 * hash) + MINEID_FIELD_NUMBER;
         hash = (53 * hash) + getMineId();
+        if (!internalGetMagics().getMap().isEmpty()) {
+          hash = (37 * hash) + MAGICS_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetMagics().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -11302,6 +13540,28 @@ public final class Build {
           return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_descriptor;
         }
 
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 3:
+              return internalGetMagics();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 3:
+              return internalGetMutableMagics();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_fieldAccessorTable
@@ -11330,6 +13590,7 @@ public final class Build {
 
           mineId_ = 0;
 
+          internalGetMutableMagics().clear();
           return this;
         }
 
@@ -11352,8 +13613,13 @@ public final class Build {
 
         public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick buildPartial() {
           com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick result = new com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
           result.id_ = id_;
           result.mineId_ = mineId_;
+          result.magics_ = internalGetMagics();
+          result.magics_.makeImmutable();
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
@@ -11401,6 +13667,8 @@ public final class Build {
           if (other.getMineId() != 0) {
             setMineId(other.getMineId());
           }
+          internalGetMutableMagics().mergeFrom(
+              other.internalGetMagics());
           onChanged();
           return this;
         }
@@ -11426,6 +13694,7 @@ public final class Build {
           }
           return this;
         }
+        private int bitField0_;
 
         private int id_ ;
         /**
@@ -11478,6 +13747,125 @@ public final class Build {
           onChanged();
           return this;
         }
+
+        private com.google.protobuf.MapField<
+            java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> magics_;
+        private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic>
+        internalGetMagics() {
+          if (magics_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MagicsDefaultEntryHolder.defaultEntry);
+          }
+          return magics_;
+        }
+        private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic>
+        internalGetMutableMagics() {
+          onChanged();;
+          if (magics_ == null) {
+            magics_ = com.google.protobuf.MapField.newMapField(
+                MagicsDefaultEntryHolder.defaultEntry);
+          }
+          if (!magics_.isMutable()) {
+            magics_ = magics_.copy();
+          }
+          return magics_;
+        }
+
+        public int getMagicsCount() {
+          return internalGetMagics().getMap().size();
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+         */
+
+        public boolean containsMagics(
+            int key) {
+          
+          return internalGetMagics().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMagicsMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> getMagics() {
+          return getMagicsMap();
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+         */
+
+        public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> getMagicsMap() {
+          return internalGetMagics().getMap();
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+         */
+
+        public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic getMagicsOrDefault(
+            int key,
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic defaultValue) {
+          
+          java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> map =
+              internalGetMagics().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+         */
+
+        public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic getMagicsOrThrow(
+            int key) {
+          
+          java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> map =
+              internalGetMagics().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearMagics() {
+          getMutableMagics().clear();
+          return this;
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+         */
+
+        public Builder removeMagics(
+            int key) {
+          
+          getMutableMagics().remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic>
+        getMutableMagics() {
+          return internalGetMutableMagics().getMutableMap();
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+         */
+        public Builder putMagics(
+            int key,
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic value) {
+          
+          if (value == null) { throw new java.lang.NullPointerException(); }
+          getMutableMagics().put(key, value);
+          return this;
+        }
+        /**
+         * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick.Magic&gt; magics = 3;</code>
+         */
+
+        public Builder putAllMagics(
+            java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Magic> values) {
+          getMutableMagics().putAll(values);
+          return this;
+        }
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return this;
@@ -11527,80 +13915,49 @@ public final class Build {
 
     }
 
-    public static final int BRICKS_FIELD_NUMBER = 1;
-    private static final class BricksDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>newDefaultInstance(
-                  com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_BricksEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.INT32,
-                  0,
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.getDefaultInstance());
+    private int bitField0_;
+    public static final int SUCCESS_FIELD_NUMBER = 1;
+    private int success_;
+    /**
+     * <code>optional int32 success = 1;</code>
+     */
+    public int getSuccess() {
+      return success_;
     }
-    private com.google.protobuf.MapField<
-        java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> bricks_;
-    private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>
-    internalGetBricks() {
-      if (bricks_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            BricksDefaultEntryHolder.defaultEntry);
-      }
+
+    public static final int BRICKS_FIELD_NUMBER = 2;
+    private java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> bricks_;
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+     */
+    public java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> getBricksList() {
       return bricks_;
     }
-
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+     */
+    public java.util.List<? extends com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.BrickOrBuilder> 
+        getBricksOrBuilderList() {
+      return bricks_;
+    }
+    /**
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+     */
     public int getBricksCount() {
-      return internalGetBricks().getMap().size();
+      return bricks_.size();
     }
     /**
-     * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
      */
-
-    public boolean containsBricks(
-        int key) {
-      
-      return internalGetBricks().getMap().containsKey(key);
+    public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick getBricks(int index) {
+      return bricks_.get(index);
     }
     /**
-     * Use {@link #getBricksMap()} instead.
+     * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
      */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> getBricks() {
-      return getBricksMap();
-    }
-    /**
-     * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
-     */
-
-    public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> getBricksMap() {
-      return internalGetBricks().getMap();
-    }
-    /**
-     * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
-     */
-
-    public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick getBricksOrDefault(
-        int key,
-        com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick defaultValue) {
-      
-      java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> map =
-          internalGetBricks().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
-     */
-
-    public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick getBricksOrThrow(
-        int key) {
-      
-      java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> map =
-          internalGetBricks().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
+    public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.BrickOrBuilder getBricksOrBuilder(
+        int index) {
+      return bricks_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11615,14 +13972,11 @@ public final class Build {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (java.util.Map.Entry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> entry
-           : internalGetBricks().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>
-        bricks = BricksDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        output.writeMessage(1, bricks);
+      if (success_ != 0) {
+        output.writeInt32(1, success_);
+      }
+      for (int i = 0; i < bricks_.size(); i++) {
+        output.writeMessage(2, bricks_.get(i));
       }
     }
 
@@ -11631,15 +13985,13 @@ public final class Build {
       if (size != -1) return size;
 
       size = 0;
-      for (java.util.Map.Entry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> entry
-           : internalGetBricks().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>
-        bricks = BricksDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
+      if (success_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, bricks);
+          .computeInt32Size(1, success_);
+      }
+      for (int i = 0; i < bricks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, bricks_.get(i));
       }
       memoizedSize = size;
       return size;
@@ -11657,8 +14009,10 @@ public final class Build {
       com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult other = (com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult) obj;
 
       boolean result = true;
-      result = result && internalGetBricks().equals(
-          other.internalGetBricks());
+      result = result && (getSuccess()
+          == other.getSuccess());
+      result = result && getBricksList()
+          .equals(other.getBricksList());
       return result;
     }
 
@@ -11669,9 +14023,11 @@ public final class Build {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptorForType().hashCode();
-      if (!internalGetBricks().getMap().isEmpty()) {
+      hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+      hash = (53 * hash) + getSuccess();
+      if (getBricksCount() > 0) {
         hash = (37 * hash) + BRICKS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetBricks().hashCode();
+        hash = (53 * hash) + getBricksList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11767,28 +14123,6 @@ public final class Build {
         return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetBricks();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetMutableBricks();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.aim.duty.duty_build_entity.protobuf.protocal.Build.internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_fieldAccessorTable
@@ -11809,11 +14143,19 @@ public final class Build {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getBricksFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
-        internalGetMutableBricks().clear();
+        success_ = 0;
+
+        if (bricksBuilder_ == null) {
+          bricks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          bricksBuilder_.clear();
+        }
         return this;
       }
 
@@ -11837,8 +14179,18 @@ public final class Build {
       public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult buildPartial() {
         com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult result = new com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult(this);
         int from_bitField0_ = bitField0_;
-        result.bricks_ = internalGetBricks();
-        result.bricks_.makeImmutable();
+        int to_bitField0_ = 0;
+        result.success_ = success_;
+        if (bricksBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            bricks_ = java.util.Collections.unmodifiableList(bricks_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.bricks_ = bricks_;
+        } else {
+          result.bricks_ = bricksBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -11880,8 +14232,35 @@ public final class Build {
 
       public Builder mergeFrom(com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult other) {
         if (other == com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.getDefaultInstance()) return this;
-        internalGetMutableBricks().mergeFrom(
-            other.internalGetBricks());
+        if (other.getSuccess() != 0) {
+          setSuccess(other.getSuccess());
+        }
+        if (bricksBuilder_ == null) {
+          if (!other.bricks_.isEmpty()) {
+            if (bricks_.isEmpty()) {
+              bricks_ = other.bricks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureBricksIsMutable();
+              bricks_.addAll(other.bricks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bricks_.isEmpty()) {
+            if (bricksBuilder_.isEmpty()) {
+              bricksBuilder_.dispose();
+              bricksBuilder_ = null;
+              bricks_ = other.bricks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              bricksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBricksFieldBuilder() : null;
+            } else {
+              bricksBuilder_.addAllMessages(other.bricks_);
+            }
+          }
+        }
         onChanged();
         return this;
       }
@@ -11909,123 +14288,270 @@ public final class Build {
       }
       private int bitField0_;
 
-      private com.google.protobuf.MapField<
-          java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> bricks_;
-      private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>
-      internalGetBricks() {
-        if (bricks_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              BricksDefaultEntryHolder.defaultEntry);
-        }
-        return bricks_;
+      private int success_ ;
+      /**
+       * <code>optional int32 success = 1;</code>
+       */
+      public int getSuccess() {
+        return success_;
       }
-      private com.google.protobuf.MapField<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>
-      internalGetMutableBricks() {
-        onChanged();;
-        if (bricks_ == null) {
-          bricks_ = com.google.protobuf.MapField.newMapField(
-              BricksDefaultEntryHolder.defaultEntry);
-        }
-        if (!bricks_.isMutable()) {
-          bricks_ = bricks_.copy();
-        }
-        return bricks_;
+      /**
+       * <code>optional int32 success = 1;</code>
+       */
+      public Builder setSuccess(int value) {
+        
+        success_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 success = 1;</code>
+       */
+      public Builder clearSuccess() {
+        
+        success_ = 0;
+        onChanged();
+        return this;
       }
 
+      private java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> bricks_ =
+        java.util.Collections.emptyList();
+      private void ensureBricksIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          bricks_ = new java.util.ArrayList<com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>(bricks_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.BrickOrBuilder> bricksBuilder_;
+
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> getBricksList() {
+        if (bricksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bricks_);
+        } else {
+          return bricksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
       public int getBricksCount() {
-        return internalGetBricks().getMap().size();
-      }
-      /**
-       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
-       */
-
-      public boolean containsBricks(
-          int key) {
-        
-        return internalGetBricks().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getBricksMap()} instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> getBricks() {
-        return getBricksMap();
-      }
-      /**
-       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
-       */
-
-      public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> getBricksMap() {
-        return internalGetBricks().getMap();
-      }
-      /**
-       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
-       */
-
-      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick getBricksOrDefault(
-          int key,
-          com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick defaultValue) {
-        
-        java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> map =
-            internalGetBricks().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
-       */
-
-      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick getBricksOrThrow(
-          int key) {
-        
-        java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> map =
-            internalGetBricks().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
+        if (bricksBuilder_ == null) {
+          return bricks_.size();
+        } else {
+          return bricksBuilder_.getCount();
         }
-        return map.get(key);
       }
-
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick getBricks(int index) {
+        if (bricksBuilder_ == null) {
+          return bricks_.get(index);
+        } else {
+          return bricksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public Builder setBricks(
+          int index, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick value) {
+        if (bricksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBricksIsMutable();
+          bricks_.set(index, value);
+          onChanged();
+        } else {
+          bricksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public Builder setBricks(
+          int index, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder builderForValue) {
+        if (bricksBuilder_ == null) {
+          ensureBricksIsMutable();
+          bricks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bricksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public Builder addBricks(com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick value) {
+        if (bricksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBricksIsMutable();
+          bricks_.add(value);
+          onChanged();
+        } else {
+          bricksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public Builder addBricks(
+          int index, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick value) {
+        if (bricksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBricksIsMutable();
+          bricks_.add(index, value);
+          onChanged();
+        } else {
+          bricksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public Builder addBricks(
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder builderForValue) {
+        if (bricksBuilder_ == null) {
+          ensureBricksIsMutable();
+          bricks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bricksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public Builder addBricks(
+          int index, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder builderForValue) {
+        if (bricksBuilder_ == null) {
+          ensureBricksIsMutable();
+          bricks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bricksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public Builder addAllBricks(
+          java.lang.Iterable<? extends com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> values) {
+        if (bricksBuilder_ == null) {
+          ensureBricksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bricks_);
+          onChanged();
+        } else {
+          bricksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
       public Builder clearBricks() {
-        getMutableBricks().clear();
+        if (bricksBuilder_ == null) {
+          bricks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          bricksBuilder_.clear();
+        }
         return this;
       }
       /**
-       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
        */
-
-      public Builder removeBricks(
-          int key) {
-        
-        getMutableBricks().remove(key);
+      public Builder removeBricks(int index) {
+        if (bricksBuilder_ == null) {
+          ensureBricksIsMutable();
+          bricks_.remove(index);
+          onChanged();
+        } else {
+          bricksBuilder_.remove(index);
+        }
         return this;
       }
       /**
-       * Use alternate mutation accessors instead.
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
        */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick>
-      getMutableBricks() {
-        return internalGetMutableBricks().getMutableMap();
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder getBricksBuilder(
+          int index) {
+        return getBricksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
        */
-      public Builder putBricks(
-          int key,
-          com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick value) {
-        
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        getMutableBricks().put(key, value);
-        return this;
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.BrickOrBuilder getBricksOrBuilder(
+          int index) {
+        if (bricksBuilder_ == null) {
+          return bricks_.get(index);  } else {
+          return bricksBuilder_.getMessageOrBuilder(index);
+        }
       }
       /**
-       * <code>map&lt;int32, .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick&gt; bricks = 1;</code>
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
        */
-
-      public Builder putAllBricks(
-          java.util.Map<java.lang.Integer, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick> values) {
-        getMutableBricks().putAll(values);
-        return this;
+      public java.util.List<? extends com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.BrickOrBuilder> 
+           getBricksOrBuilderList() {
+        if (bricksBuilder_ != null) {
+          return bricksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bricks_);
+        }
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder addBricksBuilder() {
+        return getBricksFieldBuilder().addBuilder(
+            com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder addBricksBuilder(
+          int index) {
+        return getBricksFieldBuilder().addBuilder(
+            index, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.aim.duty.duty_build_entity.protobuf.protocal.SC_GetResult.Brick bricks = 2;</code>
+       */
+      public java.util.List<com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder> 
+           getBricksBuilderList() {
+        return getBricksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.BrickOrBuilder> 
+          getBricksFieldBuilder() {
+        if (bricksBuilder_ == null) {
+          bricksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.Brick.Builder, com.aim.duty.duty_build_entity.protobuf.protocal.Build.SC_GetResult.BrickOrBuilder>(
+                  bricks_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          bricks_ = null;
+        }
+        return bricksBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12202,20 +14728,40 @@ public final class Build {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_MagicsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_MagicsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_Magic_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_Magic_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_BricksEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_BricksEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_MagicsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_MagicsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_Magic_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_Magic_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12272,14 +14818,28 @@ public final class Build {
       "\022\017\n\007success\030\001 \001(\005\"B\n\021CS_ChooseMaterial\022\025" +
       "\n\rbrickSourceId\030\001 \001(\005\022\026\n\016brickSourceNum\030" +
       "\002 \001(\005\"$\n\021SC_ChooseMaterial\022\017\n\007success\030\001 " +
-      "\001(\005\"\"\n\014CS_GetResult\022\022\n\nbrickCount\030\001 \001(\005\"" +
-      "\204\002\n\014SC_GetResult\022Z\n\006bricks\030\001 \003(\0132J.com.a" +
-      "im.duty.duty_build_entity.protobuf.proto",
-      "cal.SC_GetResult.BricksEntry\032s\n\013BricksEn" +
-      "try\022\013\n\003key\030\001 \001(\005\022S\n\005value\030\002 \001(\0132D.com.ai" +
-      "m.duty.duty_build_entity.protobuf.protoc" +
-      "al.SC_GetResult.Brick:\0028\001\032#\n\005Brick\022\n\n\002id" +
-      "\030\001 \001(\005\022\016\n\006mineId\030\002 \001(\005b\006proto3"
+      "\001(\005\"\206\003\n\014CS_GetResult\022T\n\006bricks\030\001 \003(\0132D.c" +
+      "om.aim.duty.duty_build_entity.protobuf.p" +
+      "rotocal.CS_GetResult.Brick\032\237\002\n\005Brick\022`\n\006",
+      "magics\030\001 \003(\0132P.com.aim.duty.duty_build_e" +
+      "ntity.protobuf.protocal.CS_GetResult.Bri" +
+      "ck.MagicsEntry\032y\n\013MagicsEntry\022\013\n\003key\030\001 \001" +
+      "(\005\022Y\n\005value\030\002 \001(\0132J.com.aim.duty.duty_bu" +
+      "ild_entity.protobuf.protocal.CS_GetResul" +
+      "t.Brick.Magic:\0028\001\0329\n\005Magic\022\017\n\007magicId\030\001 " +
+      "\001(\005\022\020\n\010duration\030\002 \001(\005\022\r\n\005value\030\003 \001(\005\"\263\003\n" +
+      "\014SC_GetResult\022\017\n\007success\030\001 \001(\005\022T\n\006bricks" +
+      "\030\002 \003(\0132D.com.aim.duty.duty_build_entity." +
+      "protobuf.protocal.SC_GetResult.Brick\032\273\002\n",
+      "\005Brick\022\n\n\002id\030\001 \001(\005\022\016\n\006mineId\030\002 \001(\005\022`\n\006ma" +
+      "gics\030\003 \003(\0132P.com.aim.duty.duty_build_ent" +
+      "ity.protobuf.protocal.SC_GetResult.Brick" +
+      ".MagicsEntry\032y\n\013MagicsEntry\022\013\n\003key\030\001 \001(\005" +
+      "\022Y\n\005value\030\002 \001(\0132J.com.aim.duty.duty_buil" +
+      "d_entity.protobuf.protocal.SC_GetResult." +
+      "Brick.Magic:\0028\001\0329\n\005Magic\022\017\n\007magicId\030\001 \001(" +
+      "\005\022\020\n\010duration\030\002 \001(\005\022\r\n\005value\030\003 \001(\005b\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12442,25 +15002,49 @@ public final class Build {
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_descriptor,
-        new java.lang.String[] { "BrickCount", });
+        new java.lang.String[] { "Bricks", });
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_descriptor =
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_descriptor.getNestedTypes().get(0);
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_descriptor,
+        new java.lang.String[] { "Magics", });
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_MagicsEntry_descriptor =
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_descriptor.getNestedTypes().get(0);
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_MagicsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_MagicsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_Magic_descriptor =
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_descriptor.getNestedTypes().get(1);
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_Magic_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_GetResult_Brick_Magic_descriptor,
+        new java.lang.String[] { "MagicId", "Duration", "Value", });
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_descriptor,
-        new java.lang.String[] { "Bricks", });
-    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_BricksEntry_descriptor =
-      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_descriptor.getNestedTypes().get(0);
-    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_BricksEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_BricksEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "Success", "Bricks", });
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_descriptor =
-      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_descriptor.getNestedTypes().get(1);
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_descriptor.getNestedTypes().get(0);
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_descriptor,
-        new java.lang.String[] { "Id", "MineId", });
+        new java.lang.String[] { "Id", "MineId", "Magics", });
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_MagicsEntry_descriptor =
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_descriptor.getNestedTypes().get(0);
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_MagicsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_MagicsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_Magic_descriptor =
+      internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_descriptor.getNestedTypes().get(1);
+    internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_Magic_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_GetResult_Brick_Magic_descriptor,
+        new java.lang.String[] { "MagicId", "Duration", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
