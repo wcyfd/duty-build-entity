@@ -6,6 +6,7 @@ import java.util.Map;
 import com.aim.duty.duty_base.entity.base.AbstractProp;
 import com.aim.duty.duty_base.entity.base.CustomSerializable;
 import com.aim.duty.duty_base.service.prop.PropConstant;
+import com.aim.duty.duty_build_entity.fo.OreConfig;
 import com.aim.duty.duty_build_entity.po.Magic;
 import com.aim.duty.duty_build_entity.protobuf.serial.SerialBuild.SerBrick;
 import com.aim.duty.duty_build_entity.protobuf.serial.SerialBuild.SerMagic;

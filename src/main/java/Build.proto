@@ -98,11 +98,11 @@ message CS_GetResult{
 	repeated Brick bricks=1;
 	message Brick{
 		map<int32,Magic> magics = 1;
-			message Magic{
-				int32 magicId=1;
-				int32 duration=2;
-				int32 value=3;
-			}
+		message Magic{
+			int32 magicId=1;
+			int32 duration=2;
+			int32 value=3;
+		}
 	}
 }
 
