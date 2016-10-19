@@ -65,13 +65,13 @@ message SC_ShowBrick{
 	}
 }
 
-message CS_AddBrickToWall{
+message CS_ReplaceBrick{
 	int32 indexAtWall =1;
 	int32 propId=2;
 }
 
-message SC_AddBrickToWall{
-	int32 success=1;	
+message SC_ReplaceBrick{
+	int32 success=1;
 }
 
 message CS_AddMagic{
@@ -85,14 +85,12 @@ message SC_AddMagic{
 
 message CS_ChooseMaterial{
 	int32 brickSourceId = 1;
-	int32 brickSourceNum=2;
+	int32 brickSourceNum= 2;
 }
 
 message SC_ChooseMaterial{
 	int32 success=1;
 }
-
-
 
 message CS_GetResult{
 	repeated Brick bricks=1;
@@ -120,4 +118,18 @@ message SC_GetResult{
 			int32 value=3;
 		}
 	}
+}
+
+message CS_GetWallValue{
+	
+}
+
+message SC_GetWallValue{
+	message Magic{
+		int32 duration=1;
+		int32 value = 2;
+		int32 magicId = 3;
+	}
+	int32 blood = 1;
+	map<int32,Magic> magics = 2;
 }

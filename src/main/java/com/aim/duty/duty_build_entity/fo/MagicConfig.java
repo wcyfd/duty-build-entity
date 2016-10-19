@@ -38,4 +38,6 @@ public class MagicConfig {
 		this.maxDuration = maxDuration;
 	}
 
+	
+
 }

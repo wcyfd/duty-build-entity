@@ -1,0 +1,22 @@
+syntax = "proto3";
+package com.aim.duty.duty_build_entity.protobuf.protocal;
+
+message CS_SaleProp{
+	int32 propId=1;
+	int32 num=2;
+	int32 singlePrice=3;
+}
+
+message SC_SaleProp{
+	int32 success=1;
+}
+
+message CS_BuyProp{
+	int32 commodityId=1;
+	int32 num=2;
+}
+
+message SC_BuyProp{
+	int32 success=1;
+	string print=2;
+}
