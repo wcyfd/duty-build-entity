@@ -9,6 +9,7 @@ message CS_SaleProp{
 
 message SC_SaleProp{
 	int32 success=1;
+	int32 propId=2;
 }
 
 message CS_BuyProp{
@@ -18,5 +19,7 @@ message CS_BuyProp{
 
 message SC_BuyProp{
 	int32 success=1;
-	string print=2;
+	int32 propId=2;
+	int32 propType=3;
+	bytes abstractProp = 4;
 }

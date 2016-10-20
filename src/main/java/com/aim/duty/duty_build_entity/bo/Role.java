@@ -16,8 +16,10 @@ public class Role extends BaseRole {
 
 	private Room room;
 
+	private Trade trade;
+
 	private Map<Integer, AbstractProp> propMap = new HashMap<>();
-	
+
 	private Lock lock = new ReentrantLock();
 
 	public void setWall(Wall wall) {
@@ -52,4 +54,13 @@ public class Role extends BaseRole {
 	public Map<Integer, AbstractProp> getPropMap() {
 		return propMap;
 	}
+
+	public Trade getTrade() {
+		return trade;
+	}
+
+	public void setTrade(Trade trade) {
+		this.trade = trade;
+	}
+
 }

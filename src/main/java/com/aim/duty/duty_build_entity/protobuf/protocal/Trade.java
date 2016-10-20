@@ -577,6 +577,11 @@ public final class Trade {
      * <code>optional int32 success = 1;</code>
      */
     int getSuccess();
+
+    /**
+     * <code>optional int32 propId = 2;</code>
+     */
+    int getPropId();
   }
   /**
    * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.SC_SaleProp}
@@ -591,6 +596,7 @@ public final class Trade {
     }
     private SC_SaleProp() {
       success_ = 0;
+      propId_ = 0;
     }
 
     @java.lang.Override
@@ -621,6 +627,11 @@ public final class Trade {
             case 8: {
 
               success_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              propId_ = input.readInt32();
               break;
             }
           }
@@ -655,6 +666,15 @@ public final class Trade {
       return success_;
     }
 
+    public static final int PROPID_FIELD_NUMBER = 2;
+    private int propId_;
+    /**
+     * <code>optional int32 propId = 2;</code>
+     */
+    public int getPropId() {
+      return propId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -670,6 +690,9 @@ public final class Trade {
       if (success_ != 0) {
         output.writeInt32(1, success_);
       }
+      if (propId_ != 0) {
+        output.writeInt32(2, propId_);
+      }
     }
 
     public int getSerializedSize() {
@@ -680,6 +703,10 @@ public final class Trade {
       if (success_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, success_);
+      }
+      if (propId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, propId_);
       }
       memoizedSize = size;
       return size;
@@ -699,6 +726,8 @@ public final class Trade {
       boolean result = true;
       result = result && (getSuccess()
           == other.getSuccess());
+      result = result && (getPropId()
+          == other.getPropId());
       return result;
     }
 
@@ -711,6 +740,8 @@ public final class Trade {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
       hash = (53 * hash) + getSuccess();
+      hash = (37 * hash) + PROPID_FIELD_NUMBER;
+      hash = (53 * hash) + getPropId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -831,6 +862,8 @@ public final class Trade {
         super.clear();
         success_ = 0;
 
+        propId_ = 0;
+
         return this;
       }
 
@@ -854,6 +887,7 @@ public final class Trade {
       public com.aim.duty.duty_build_entity.protobuf.protocal.Trade.SC_SaleProp buildPartial() {
         com.aim.duty.duty_build_entity.protobuf.protocal.Trade.SC_SaleProp result = new com.aim.duty.duty_build_entity.protobuf.protocal.Trade.SC_SaleProp(this);
         result.success_ = success_;
+        result.propId_ = propId_;
         onBuilt();
         return result;
       }
@@ -897,6 +931,9 @@ public final class Trade {
         if (other == com.aim.duty.duty_build_entity.protobuf.protocal.Trade.SC_SaleProp.getDefaultInstance()) return this;
         if (other.getSuccess() != 0) {
           setSuccess(other.getSuccess());
+        }
+        if (other.getPropId() != 0) {
+          setPropId(other.getPropId());
         }
         onChanged();
         return this;
@@ -946,6 +983,32 @@ public final class Trade {
       public Builder clearSuccess() {
         
         success_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int propId_ ;
+      /**
+       * <code>optional int32 propId = 2;</code>
+       */
+      public int getPropId() {
+        return propId_;
+      }
+      /**
+       * <code>optional int32 propId = 2;</code>
+       */
+      public Builder setPropId(int value) {
+        
+        propId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 propId = 2;</code>
+       */
+      public Builder clearPropId() {
+        
+        propId_ = 0;
         onChanged();
         return this;
       }
@@ -1500,14 +1563,19 @@ public final class Trade {
     int getSuccess();
 
     /**
-     * <code>optional string print = 2;</code>
+     * <code>optional int32 propId = 2;</code>
      */
-    java.lang.String getPrint();
+    int getPropId();
+
     /**
-     * <code>optional string print = 2;</code>
+     * <code>optional int32 propType = 3;</code>
      */
-    com.google.protobuf.ByteString
-        getPrintBytes();
+    int getPropType();
+
+    /**
+     * <code>optional bytes abstractProp = 4;</code>
+     */
+    com.google.protobuf.ByteString getAbstractProp();
   }
   /**
    * Protobuf type {@code com.aim.duty.duty_build_entity.protobuf.protocal.SC_BuyProp}
@@ -1522,7 +1590,9 @@ public final class Trade {
     }
     private SC_BuyProp() {
       success_ = 0;
-      print_ = "";
+      propId_ = 0;
+      propType_ = 0;
+      abstractProp_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -1555,10 +1625,19 @@ public final class Trade {
               success_ = input.readInt32();
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 16: {
 
-              print_ = s;
+              propId_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              propType_ = input.readInt32();
+              break;
+            }
+            case 34: {
+
+              abstractProp_ = input.readBytes();
               break;
             }
           }
@@ -1593,38 +1672,31 @@ public final class Trade {
       return success_;
     }
 
-    public static final int PRINT_FIELD_NUMBER = 2;
-    private volatile java.lang.Object print_;
+    public static final int PROPID_FIELD_NUMBER = 2;
+    private int propId_;
     /**
-     * <code>optional string print = 2;</code>
+     * <code>optional int32 propId = 2;</code>
      */
-    public java.lang.String getPrint() {
-      java.lang.Object ref = print_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        print_ = s;
-        return s;
-      }
+    public int getPropId() {
+      return propId_;
     }
+
+    public static final int PROPTYPE_FIELD_NUMBER = 3;
+    private int propType_;
     /**
-     * <code>optional string print = 2;</code>
+     * <code>optional int32 propType = 3;</code>
      */
-    public com.google.protobuf.ByteString
-        getPrintBytes() {
-      java.lang.Object ref = print_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        print_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getPropType() {
+      return propType_;
+    }
+
+    public static final int ABSTRACTPROP_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString abstractProp_;
+    /**
+     * <code>optional bytes abstractProp = 4;</code>
+     */
+    public com.google.protobuf.ByteString getAbstractProp() {
+      return abstractProp_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1642,8 +1714,14 @@ public final class Trade {
       if (success_ != 0) {
         output.writeInt32(1, success_);
       }
-      if (!getPrintBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, print_);
+      if (propId_ != 0) {
+        output.writeInt32(2, propId_);
+      }
+      if (propType_ != 0) {
+        output.writeInt32(3, propType_);
+      }
+      if (!abstractProp_.isEmpty()) {
+        output.writeBytes(4, abstractProp_);
       }
     }
 
@@ -1656,8 +1734,17 @@ public final class Trade {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, success_);
       }
-      if (!getPrintBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, print_);
+      if (propId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, propId_);
+      }
+      if (propType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, propType_);
+      }
+      if (!abstractProp_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, abstractProp_);
       }
       memoizedSize = size;
       return size;
@@ -1677,8 +1764,12 @@ public final class Trade {
       boolean result = true;
       result = result && (getSuccess()
           == other.getSuccess());
-      result = result && getPrint()
-          .equals(other.getPrint());
+      result = result && (getPropId()
+          == other.getPropId());
+      result = result && (getPropType()
+          == other.getPropType());
+      result = result && getAbstractProp()
+          .equals(other.getAbstractProp());
       return result;
     }
 
@@ -1691,8 +1782,12 @@ public final class Trade {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
       hash = (53 * hash) + getSuccess();
-      hash = (37 * hash) + PRINT_FIELD_NUMBER;
-      hash = (53 * hash) + getPrint().hashCode();
+      hash = (37 * hash) + PROPID_FIELD_NUMBER;
+      hash = (53 * hash) + getPropId();
+      hash = (37 * hash) + PROPTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getPropType();
+      hash = (37 * hash) + ABSTRACTPROP_FIELD_NUMBER;
+      hash = (53 * hash) + getAbstractProp().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1813,7 +1908,11 @@ public final class Trade {
         super.clear();
         success_ = 0;
 
-        print_ = "";
+        propId_ = 0;
+
+        propType_ = 0;
+
+        abstractProp_ = com.google.protobuf.ByteString.EMPTY;
 
         return this;
       }
@@ -1838,7 +1937,9 @@ public final class Trade {
       public com.aim.duty.duty_build_entity.protobuf.protocal.Trade.SC_BuyProp buildPartial() {
         com.aim.duty.duty_build_entity.protobuf.protocal.Trade.SC_BuyProp result = new com.aim.duty.duty_build_entity.protobuf.protocal.Trade.SC_BuyProp(this);
         result.success_ = success_;
-        result.print_ = print_;
+        result.propId_ = propId_;
+        result.propType_ = propType_;
+        result.abstractProp_ = abstractProp_;
         onBuilt();
         return result;
       }
@@ -1883,9 +1984,14 @@ public final class Trade {
         if (other.getSuccess() != 0) {
           setSuccess(other.getSuccess());
         }
-        if (!other.getPrint().isEmpty()) {
-          print_ = other.print_;
-          onChanged();
+        if (other.getPropId() != 0) {
+          setPropId(other.getPropId());
+        }
+        if (other.getPropType() != 0) {
+          setPropType(other.getPropType());
+        }
+        if (other.getAbstractProp() != com.google.protobuf.ByteString.EMPTY) {
+          setAbstractProp(other.getAbstractProp());
         }
         onChanged();
         return this;
@@ -1939,71 +2045,83 @@ public final class Trade {
         return this;
       }
 
-      private java.lang.Object print_ = "";
+      private int propId_ ;
       /**
-       * <code>optional string print = 2;</code>
+       * <code>optional int32 propId = 2;</code>
        */
-      public java.lang.String getPrint() {
-        java.lang.Object ref = print_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          print_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public int getPropId() {
+        return propId_;
       }
       /**
-       * <code>optional string print = 2;</code>
+       * <code>optional int32 propId = 2;</code>
        */
-      public com.google.protobuf.ByteString
-          getPrintBytes() {
-        java.lang.Object ref = print_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          print_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public Builder setPropId(int value) {
+        
+        propId_ = value;
+        onChanged();
+        return this;
       }
       /**
-       * <code>optional string print = 2;</code>
+       * <code>optional int32 propId = 2;</code>
        */
-      public Builder setPrint(
-          java.lang.String value) {
+      public Builder clearPropId() {
+        
+        propId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int propType_ ;
+      /**
+       * <code>optional int32 propType = 3;</code>
+       */
+      public int getPropType() {
+        return propType_;
+      }
+      /**
+       * <code>optional int32 propType = 3;</code>
+       */
+      public Builder setPropType(int value) {
+        
+        propType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 propType = 3;</code>
+       */
+      public Builder clearPropType() {
+        
+        propType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString abstractProp_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes abstractProp = 4;</code>
+       */
+      public com.google.protobuf.ByteString getAbstractProp() {
+        return abstractProp_;
+      }
+      /**
+       * <code>optional bytes abstractProp = 4;</code>
+       */
+      public Builder setAbstractProp(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        print_ = value;
+        abstractProp_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string print = 2;</code>
+       * <code>optional bytes abstractProp = 4;</code>
        */
-      public Builder clearPrint() {
+      public Builder clearAbstractProp() {
         
-        print_ = getDefaultInstance().getPrint();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string print = 2;</code>
-       */
-      public Builder setPrintBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        print_ = value;
+        abstractProp_ = getDefaultInstance().getAbstractProp();
         onChanged();
         return this;
       }
@@ -2088,10 +2206,11 @@ public final class Trade {
       "\n\013Trade.proto\0220com.aim.duty.duty_build_e" +
       "ntity.protobuf.protocal\"?\n\013CS_SaleProp\022\016" +
       "\n\006propId\030\001 \001(\005\022\013\n\003num\030\002 \001(\005\022\023\n\013singlePri" +
-      "ce\030\003 \001(\005\"\036\n\013SC_SaleProp\022\017\n\007success\030\001 \001(\005" +
-      "\".\n\nCS_BuyProp\022\023\n\013commodityId\030\001 \001(\005\022\013\n\003n" +
-      "um\030\002 \001(\005\",\n\nSC_BuyProp\022\017\n\007success\030\001 \001(\005\022" +
-      "\r\n\005print\030\002 \001(\tb\006proto3"
+      "ce\030\003 \001(\005\".\n\013SC_SaleProp\022\017\n\007success\030\001 \001(\005" +
+      "\022\016\n\006propId\030\002 \001(\005\".\n\nCS_BuyProp\022\023\n\013commod" +
+      "ityId\030\001 \001(\005\022\013\n\003num\030\002 \001(\005\"U\n\nSC_BuyProp\022\017" +
+      "\n\007success\030\001 \001(\005\022\016\n\006propId\030\002 \001(\005\022\020\n\010propT" +
+      "ype\030\003 \001(\005\022\024\n\014abstractProp\030\004 \001(\014b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2116,7 +2235,7 @@ public final class Trade {
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_SaleProp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_SaleProp_descriptor,
-        new java.lang.String[] { "Success", });
+        new java.lang.String[] { "Success", "PropId", });
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_BuyProp_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_CS_BuyProp_fieldAccessorTable = new
@@ -2128,7 +2247,7 @@ public final class Trade {
     internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_BuyProp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_aim_duty_duty_build_entity_protobuf_protocal_SC_BuyProp_descriptor,
-        new java.lang.String[] { "Success", "Print", });
+        new java.lang.String[] { "Success", "PropId", "PropType", "AbstractProp", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

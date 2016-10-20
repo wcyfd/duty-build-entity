@@ -63,11 +63,11 @@ public class Brick extends AbstractProp implements CustomSerializable<Brick> {
 		SerBrick.Builder brickBuilder = SerBrick.newBuilder();
 		brickBuilder.setMineId(this.mineId);
 		Map<Integer, SerMagic> serMagicMap = new HashMap<>();
-		brickBuilder.putAllMagics(serMagicMap);
 		for (Magic magic : this.magicMap.values()) {
 			serMagicMap.put(magic.getMagicId(), SerMagic.newBuilder().setDuration(magic.getDuration())
 					.setMagicId(magic.getMagicId()).setValue(magic.getValue()).build());
 		}
+		brickBuilder.putAllMagics(serMagicMap);
 		return brickBuilder.build().toByteString();
 	}
 
